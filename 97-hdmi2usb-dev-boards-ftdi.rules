@@ -1,0 +1,7 @@
+# Boards with FTDI and having custom VID/PID need to be bound to ftdi_sio driver
+# Load ftdi_sio via modprobe and then bind the VID/PID to it
+
+# Numato Lab Mimas A7
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="2a19", ATTRS{idProduct}=="1009", ATTRS{manufacturer}=="Numato Lab" \
+        RUN+="/sbin/modprobe ftdi_sio", \
+        RUN+="/bin/sh -c '/bin/echo 2a19 1009 > /sys/bus/usb-serial/drivers/ftdi_sio/new_id'"

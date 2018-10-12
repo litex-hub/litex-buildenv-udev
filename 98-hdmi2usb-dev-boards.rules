@@ -4,6 +4,10 @@
 SUBSYSTEM=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6010", ATTRS{manufacturer}=="Digilent" \
 	ENV{ID_HDMI2USBDEV}:="1", ENV{ID_HDMI2USBDEV_BOARD}:="arty"
 
+# Numato Lab Mimas A7
+SUBSYSTEM=="usb", ATTRS{idVendor}=="2a19", ATTRS{idProduct}=="1009", ATTRS{manufacturer}=="Numato Lab" \
+        ENV{ID_HDMI2USBDEV}:="1", ENV{ID_HDMI2USBDEV_BOARD}:="mimas_a7"
+
 # Digilent Nexys Video
 
 # Pipistrello
