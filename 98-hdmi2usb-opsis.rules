@@ -18,7 +18,7 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="2a19", ATTRS{idProduct}=="5442", \
 SUBSYSTEM=="tty", ATTRS{idVendor}=="2a19", ATTRS{idProduct}=="5442", \
 	ENV{ID_HDMI2USB}:="1", ENV{ID_HDMI2USB_BOARD}:="opsis", ENV{ID_HDMI2USB_TTY}:=""
 
-SUBSYSTEM=="video4linux", ATTRS{idVendor}=="2a19", ATTRS{idProduct}=="5442", \
+SUBSYSTEM=="video4linux", ATTRS{idVendor}=="2a19", ATTRS{idProduct}=="5442", ATTR{index}=="0", \
 	ENV{ID_HDMI2USB}:="1", ENV{ID_HDMI2USB_BOARD}:="opsis"
 
 # TOFE LowSpeedIO board
